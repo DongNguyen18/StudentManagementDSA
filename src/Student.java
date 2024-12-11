@@ -1,3 +1,4 @@
+// Student class
 class Student {
     private String studentId;
     private String name;
@@ -8,10 +9,10 @@ class Student {
         this.studentId = studentId;
         this.name = name;
         this.score = score;
-        this.rank = calculateRank();  // Automatically calculate rank
+        this.rank = calculateRank(); // Automatically calculate rank
     }
 
-    // Method to calculate student rank
+    // Method to calculate student rank (Hàm tính xếp hạng sinh viên)
     private String calculateRank() {
         if (score < 5.0) {
             return "Fail";
@@ -26,7 +27,7 @@ class Student {
         }
     }
 
-    // Getters and Setters for the attributes
+    // Getters and Setters (Phương thức lấy và đặt giá trị)
     public String getStudentId() {
         return studentId;
     }
@@ -49,16 +50,14 @@ class Student {
 
     public void setScore(double score) {
         this.score = score;
-        this.rank = calculateRank();  // Update rank when score changes
+        this.rank = calculateRank(); // Update rank when score changes
     }
 
     public String getRank() {
         return rank;
     }
 
-
-
-    // Method to display student information
+    // Method to display student information (Hiển thị thông tin sinh viên)
     @Override
     public String toString() {
         return "Student{" +
